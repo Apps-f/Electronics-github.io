@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electronics 1/L</title>
+    <link rel="stylesheet" href="css/style.css" />
+    
+</head>
+<style>
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+}
+
+#home {
+  padding: 5rem 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+.logo {
+  color: white;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
+
+
+
+/* ///////////..utility classes../////////// */
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+
+.btn-primary {
+  color: #fff;
+  background: purple;
+}
+
+.btn-primary:hover {
+  background: green;
+  transition: background 0.3s ease-in-out;
+}
+
+/* ............/navbar/............ *
+/* desktop mode............/// */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar {
+  box-shadow: 0px 0px 10px 0px #aaaaaa3f;
+  position: fixed;
+  width: 100%;
+  background: purple;
+  color: white;
+  opacity: 0.90;
+  height: 50px;
+  z-index: 12;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: green;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ............//// Showcase styling ////......... */
+
+.showcase-area {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    url("https://images2.alphacoders.com/220/220582.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.main-title {
+  text-transform: uppercase;
+  margin-top: .5em;
+}
+
+/* ......//about us//...... */
+
+#about {
+  padding: 50px 0;
+  background: #f5f5f7;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about p {
+  font-size: 1.4rem;
+}
+
+#about .small {
+  font-size: 2rem;
+  color: green;
+  font-weight: 600;
+}
+
+.about-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translateX(150%);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  transform: translate(-150%);
+  animation: about-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-img img {
+  display: block;
+  height: 400px;
+  max-width: 100%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+}
+
+/* .........../Electrical Elements/............ */
+
+#elements {
+  padding: 5rem 0;
+}
+
+.elements-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: green;
+}
+
+.elements-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0px 30px 0px;
+}
+
+.elements-container img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.elements-item {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.elements-description {
+  margin: auto 1.5rem;
+}
+
+.elements-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: purple;
+}
+
+.elements-description p {
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 500;
+}
+
+
+/* ......../ media query /.......... */
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 23px;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px 0px #aaa;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 2rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(35deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-35deg);
+  }
+
+  /* ......./ food /......... */
+
+  .food-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .food-type:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  .food-type {
+    box-shadow: 5px 5px 10px 0 #aaa;
+  }
+
+  .img-container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 65%;
+  }
+
+  .navbar .menu-items li {
+    font-size: 1.6rem;
+  }
+
+  .testimonial-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .food-menu-container img {
+    margin: auto;
+  }
+
+  .food-menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-img {
+    width: 90%;
+    margin: 3rem auto;
+  }
+
+  .logo {
+    position: absolute;
+    top: 06px;
+    right: 15px;
+    font-size: 3rem;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .img-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .img-container .btn {
+    font-size: 0.7rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .showcase-area {
+    height: 50vmax;
+  }
+}
+
+</style>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#elements">Electrical Elements</a></li>
+            </ul>
+            <h1 class="logo">Electronics 1/L</h1>
+        </div>
+    </nav>
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">Basic Electrical Elements</h1>
+            <p>"Schematic symbols of basic electrical elements"</p>
+            <a href="#about" class="btn btn-primary">Let's Start</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <p class="small">About</p>
+                <p>
+                  Electrical elements are like imaginary building blocks that engineers use to understand and design electrical circuits. 
+                  They are simplified versions of real electrical components, helping experts analyze and predict how complex electrical systems will behave. 
+                  These elements make it easier to work with circuits without getting bogged down by all the details of actual components.
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="https://i.pinimg.com/originals/75/ff/8f/75ff8f7af17aec5b4a9ed1318279aadd.jpg" />
+            </div>
+        </div>
+    </section>
+    
+    <section id="elements">
+        <h2 class="elements-heading">Electrical Elements</h2>
+        <div class="elements-container container">
+            <div class="elements-item">
+                <div class="elements-img">
+                    <img src="https://th.bing.com/th/id/OIP.1T4IVjU1_VQ0h2LPLnAuEQAAAA?rs=1&pid=ImgDetMain" alt="" />
+                </div>
+                <div class="elements-description">
+                    <h2 class="elements-title">Resistor</h2>
+                    <p>
+                      Resistor is a passive component that restricts the flow of electric current. It’s commonly used to control voltage levels, limit current, and divide voltage in circuits.
+                    </p>
+                </div>
+            </div>
+
+            <div class="elements-item">
+              <div class="elements-img">
+                  <img src="https://th.bing.com/th/id/R.51fb927acb58243c1720bbed0f56276f?rik=qfXGu2juPa6NlQ&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fecM%2fEpb%2fecMEpbX5i.png&ehk=ETLcDs%2bnXNe6eBgUbq%2fbSkW5PpfRAOcEjEqaLcU%2fvNU%3d&risl=&pid=ImgRaw&r=0" alt="" />
+              </div>
+              <div class="elements-description">
+                  <h2 class="elements-title">Capacitor</h2>
+                  <p>
+                    Capacitor is a two-terminal component that stores electrical energy in an electric field. It is often used to filter, smooth, or store electrical charges.
+                  </p>
+              </div>
+            </div>
+
+            <div class="elements-item">
+              <div class="elements-img">
+                  <img src="https://th.bing.com/th/id/R.b8a67f60d4e543e127629d673cfc756f?rik=UYJm3RBtOB%2bNnA&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fncB%2fKAq%2fncBKAqyRi.jpg&ehk=8ogaNlbs78Sumc4Uqjj22zF7KbHb0BwP2lHcbNaP0gg%3d&risl=&pid=ImgRaw&r=0" alt="" />
+              </div>
+              <div class="elements-description">
+                  <h2 class="elements-title">Inductor</h2>
+                  <p>
+                    Inductor is a coil of wire that resists changes in the flow of current. It stores energy in a magnetic field and is often used in applications like filtering and energy storage.
+                  </p>
+              </div>
+            </div>
+
+            <div class="elements-item">
+              <div class="elements-img">
+                  <img src="https://www.ametherm.com/wp-content/uploads/2018/05/DC-symbol-150x150.png" alt="" />
+              </div>
+              <div class="elements-description">
+                  <h2 class="elements-title">Voltage Source</h2>
+                  <p>
+                    Voltage source is a device that provides a constant or varying potential difference (voltage) across its terminals. It can be an ideal voltage source or a practical one with internal resistance.
+                  </p>
+              </div>
+            </div>
+
+            <div class="elements-item">
+              <div class="elements-img">
+                  <img src="https://cdn3.iconfinder.com/data/icons/circuit-and-pipe/128/CircuitPipe-09-1024.png" alt="" />
+              </div>
+              <div class="elements-description">
+                  <h2 class="elements-title">Current Source</h2>
+                  <p>
+                    Current source is a device that provides a constant or varying current in a circuit, regardless of the voltage across its terminals. Similar to voltage sources, they can be ideal or practical.
+                  </p>
+              </div>
+            </div>
+
+            <div class="elements-item">
+              <div class="elements-img">
+                  <img src="https://cdn0.iconfinder.com/data/icons/electronic-components-line/50/ground-1024.png" alt="" />
+              </div>
+              <div class="elements-description">
+                  <h2 class="elements-title">Ground</h2>
+                  <p>
+                    Ground is a reference point in an electrical circuit. It serves as a common return path for current and provides a stable zero-voltage reference.
+                  </p>
+              </div>
+            </div>
+
+            <div class="elements-item">
+              <div class="elements-img">
+                  <img src="https://th.bing.com/th/id/OIP.vjSZng7XG44gs9uraL8ebAHaHa?rs=1&pid=ImgDetMain" alt="" />
+              </div>
+              <div class="elements-description">
+                  <h2 class="elements-title">Switch</h2>
+                  <p>
+                    Switch is an electrical component that can open or close a circuit. It controls the flow of current by interrupting or allowing the path for electricity. Switches are used for turning devices on/off.
+                  </p>
+              </div>
+            </div>
+
+            <div class="elements-item">
+              <div class="elements-img">
+                  <img src="https://th.bing.com/th/id/R.21364259958320aafdfd9cd42b36e663?rik=c%2b3Boo3wnTr9tQ&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fKcj%2fXxa%2fKcjXxaj6i.png&ehk=0LGyaVWlKCSnc2wOuzeMiDwkRq7FxDkNU1YUbP81OlM%3d&risl=&pid=ImgRaw&r=0" alt="" />
+              </div>
+              <div class="elements-description">
+                  <h2 class="elements-title">Diode</h2>
+                  <p>
+                    Diode is a semiconductor device that allows current to flow in only one direction. It acts as a one-way valve for electrical current. Diodes are essential for rectification, signal modulation, and protection.
+                  </p>
+              </div>
+            </div>
+
+            <div class="elements-item">
+              <div class="elements-img">
+                  <img src="https://th.bing.com/th/id/R.319595cf7150c9efe6cc817af5c59edb?rik=OrCFl1jENh92Dg&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fniB%2fR8z%2fniBR8z9oT.png&ehk=MU%2fTy%2bToaPAQ3hic4Pqwh7R5IH%2bEeWAWhidRFDJ6Vg8%3d&risl=&pid=ImgRaw&r=0" alt="" />
+              </div>
+              <div class="elements-description">
+                  <h2 class="elements-title">Transistor</h2>
+                  <p>
+                    Transistor is a semiconductor device that can amplify or switch electronic signals. It operates based on the principles of semiconductor physics and can be used as an amplifier, a switch, or in various electronic circuits.
+                  </p>
+              </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- .................../ JS Code for smooth scrolling /...................... -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
